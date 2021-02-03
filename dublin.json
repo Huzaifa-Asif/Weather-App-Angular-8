@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "dublin-laundry8580",
+  "private_key_id": "a56e967e158269697da217cb1f48230522dfb3ee",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDNiyC+E0zxuw6G\nOgkeA+DNclL6+ns2yPxBrqk3L1XrIlDZHX51360RqjXvA0diID981j13NxrszbgW\nzNpoHvNrBJWj0tdQhGVOqdTLxWkd7hUtmVar8tPoq6fVjledFHkVqGtBCTREAX7L\nHUZFADzfdlpDVxbz7Rd1VGDU+EG816yrcRe04kM2GfZSILCIcTzv6fw/S8oABOV8\nsfCDVTexPba1vl1NkbrhduFUy6iUy6bkvtr+zDXNx79PZNF+U3qw4FX0L3QvybCL\n6MpKcuRR5Sz5fy7AfX76Oox9zgnE4kZVabA7IAB0dlLnQuneGR4aW8vrezLsDBob\nffVWIU8hAgMBAAECggEAUTB2k34OM6Hev9hmx4tineRdsLOGPgKv2cYDI0A4YPOi\nGdDTpf3fYA3q1elmpfT0/vulNdT3drhf0enDD8PCBPC/pwFeeXiCh8r/uinVNrRX\nezaJjMwTNmGvnuRl6S8wEQUAsKTRF1e73MFIg3LvmJkoWFcrQtjRHlBhG16goNWf\nL9+PjyUZXZ+TvX7msodDsnrxJ9xYP0QY3T+GI0eBZtcyDyIbg5x5Atzwa7tWPFjQ\nODwZwy2lITj6TRpzj28H9XaIxZtoI/RO+QbpRTe6OsI2vmoWzHwysrqL1aamhSsd\nwzEQRki6H17Vj972breOzP08PnPe87+ShpP4QxfA7QKBgQDldALXLa/jdSKGmjiW\nDKhf4xQ0uSuvF03CleWvILkwz74WV+c4JrktNkyYXWv5PVNwTRVzupd3Rrm40HCD\nmQ102SaSWUn02ASwirdBv+P24AE90YlL5jV/TiVFOslZan7IJuQdcGy3PR5O3YSy\nDnE+07fPaSWiFUGKqRBMmYI5cwKBgQDlUvRiTWr+gbxqGcNfkJT0A+YcJa5/aAFB\nDNPgSSYDW13G5DFJvoucGnpOGh3fgUAtAmbhE/kCxhZJmk9i82ElE9tJMis1W9HT\nsrHXiMxOERndVGTeqfP9HJRZISczRGigRDrqbQVDTTB4RJkU0RHrCeGiBtFdJHSP\nzS+YtLXAGwKBgQDc8ggmMd0ztsBnQqwIeOnNY3k6h7Az6sm6/OJt76HECdbt5vlE\nTa10htvcv+DP4Kiu89sbVGqztUvzVetyHPgjM1L8C7S2ayig4wIx8thOCkfHwjRl\n/Kg5DQPAlSn7yxuIGkMAwhg9nkHICXDUkCmmKPLPa12MpNE29zM1v3/xVwKBgQC+\nkwyysMGs1aX9yoE5Zs7SZncRhyMXkBgSthVRu5hSi9hH1BU9wpME3GAtjbirqB7s\nCKX0gIOckX+uFQXKJpXhmTnP/1g3FKIwOr1eb7nRWpbS/zKAdF5mRxzlYQ7RpRUJ\nswn/DTCleH1CRUeuK/ynBeQzoVTWAdi4NH1Me0jbZwKBgELluOR015McIDr12U51\nqojQakLsFuzO6Jz70iHi04jMIRn7gzzLLO+9vVyf2+7E1FOhUEHvSbJ7dDvkFdvL\nEErRzJ43FifhfxphVEEErbD4SrX8jLOdhDRaPKsCfEwRJGtrj492r9BnCnezsHtw\nuaFJlBfmnnlUlrrnYHa8EmnD\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-yhm7t@dublin-laundry8580.iam.gserviceaccount.com",
+  "client_id": "114753684520165244478",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-yhm7t%40dublin-laundry8580.iam.gserviceaccount.com"
+}

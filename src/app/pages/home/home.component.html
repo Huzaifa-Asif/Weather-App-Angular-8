@@ -1,0 +1,246 @@
+<app-header></app-header>
+
+<img src="assets/images/Home.jpg" style="width: 100%;">
+
+
+<div class="page-content">
+  <br>
+  <div class="container">
+    <h2 class="title-underline">Our Top Restaurants</h2>
+  </div>
+
+
+
+  <div class="container offset-top90" style="margin-top: 20px;">
+
+    <div class="row" style="margin-bottom: 40px">
+
+
+      <div class="col-md-3" *ngFor="let restaurant of restaurantData">
+        <a (click)="viewRestaurant(restaurant._id)">
+          <div class="card" style="width: 100%;">
+            <img src="{{restaurant.picture}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h6 class="card-title" style="text-align: center; cursor: pointer">{{restaurant.name}}</h6>
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+
+
+    
+
+    </div>
+
+
+
+
+<div class="container" style="margin-top: 20px">
+  <h2 class="title-underline">Search Restaurant</h2>
+</div>
+<form id="contactform" class="boxed-form" name="contactform" method="post" novalidate="novalidate">
+
+<div class="row">
+
+    <div class="col-md-3">
+    </div>
+
+  <div class="col-md-5">
+    <div class="form-group">
+      <input class="form-control" [(ngModel)]="search_data.title" type="text" value="" name="title" placeholder="Search Restaurant By Name or Location">
+    </div>
+  </div>
+  <div class="col-md-2">
+    <button (click)="search()" class="btn_blue" type="button" id="submit">Search</button>
+  </div>
+  <div class="col-md-1">
+    </div>
+</div>
+</form>
+
+
+  <!-- <div class="container offset-top90">
+
+    <h2 class="title-underline">Get Job by City</h2>
+
+    <div class="row">
+
+
+      <div class="col-md-6">
+
+        <ul class="list-group">
+
+          <a href="/#/job_search_city/Karachi">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Karachi
+              <span class="badge badge-primary badge-pill"></span>
+            </li>
+          </a>
+
+          <a href="/#/job_search_city/Lahore">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Lahore
+              <span class="badge badge-primary badge-pill"></span>
+            </li>
+          </a>
+
+          <a href="/#/job_search_city/Faisalabad">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Faisalabad
+              <span class="badge badge-primary badge-pill"></span>
+            </li>
+          </a>
+
+          <a href="/#/job_search_city/Quetta">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Quetta
+              <span class="badge badge-primary badge-pill"></span>
+            </li>
+          </a>
+
+          <a href="/#/job_search_city/Gujranwala">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Gujranwala
+              <span class="badge badge-primary badge-pill"></span>
+            </li>
+          </a>
+
+          <a href="/#/job_search_city/Peshawar">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Peshawar
+              <span class="badge badge-primary badge-pill"></span>
+            </li>
+          </a>
+
+          <a href="/#/job_search_city/Multan">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Multan
+              <span class="badge badge-primary badge-pill"></span>
+            </li>
+          </a>
+
+          <a href="/#/job_search_city/Hyderabad">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Hyderabad
+              <span class="badge badge-primary badge-pill"></span>
+            </li>
+          </a>
+
+          <a href="/#/job_search_city/Mardan">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Mardan
+              <span class="badge badge-primary badge-pill"></span>
+            </li>
+          </a>
+
+        </ul>
+
+
+      </div>
+
+
+      <div class="col-md-6">
+
+
+        <ul class="list-group">
+
+          <a href="/#/job_search_city/Islamabad">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Islamabad
+              <span class="badge badge-primary badge-pill"></span>
+            </li>
+          </a>
+
+          <a href="/#/job_search_city/Rawalpindi">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Rawalpindi
+              <span class="badge badge-primary badge-pill"></span>
+            </li>
+          </a>
+
+          <a href="/#/job_search_city/Bahawalpur">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Bahawalpur
+              <span class="badge badge-primary badge-pill"></span>
+            </li>
+          </a>
+
+          <a href="/#/job_search_city/Sargodha">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Sargodha
+              <span class="badge badge-primary badge-pill"></span>
+            </li>
+          </a>
+
+          <a href="/#/job_search_city/Sialkot">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Sialkot
+              <span class="badge badge-primary badge-pill"></span>
+            </li>
+          </a>
+
+          <a href="/#/job_search_city/Sukkur">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Sukkur
+              <span class="badge badge-primary badge-pill"></span>
+            </li>
+          </a>
+
+          <a href="/#/job_search_city/Jhang">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Jhang
+              <span class="badge badge-primary badge-pill"></span>
+            </li>
+          </a>
+
+          <a href="/#/job_search_city/Larkana">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Larkana
+              <span class="badge badge-primary badge-pill"></span>
+            </li>
+          </a>
+
+          <a href="/#/job_search_city/Gujrat">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Gujrat
+              <span class="badge badge-primary badge-pill"></span>
+            </li>
+          </a>
+
+        </ul>
+
+
+      </div>
+    </div>
+  </div> -->
+
+
+
+
+  <!-- <div class="container offset-top90">
+    <div class="row">
+      <div class="col-md-5">
+        <h2 class="title-underline">Our Approach</h2>
+        <p class="text-center">
+          We approach workforce accommodations with a property development mindset. Our “Develop. Own. Operate.” business model produces integrated solutions that enable clients to focus on their core business. Clients benefit from consistent service delivery with greater cost and quality control as well as more efficient use of their operational and financial resources.
+        </p>
+      </div>
+      <div class="divider visible-xs visible-sm"></div>
+      <div class="col-md-7">
+        <div class="video-indent">
+          <div class="myvideo">
+            <iframe src="https://www.youtube.com/embed/z91MtZpcsKY?rel=0"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <br>
+
+
+  <app-footer></app-footer>
+
+</div>
