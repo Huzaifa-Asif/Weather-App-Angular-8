@@ -14,12 +14,12 @@ export class RestApiService {
   constructor(private http: HttpClient,
     private sanitizer: DomSanitizer) { }
 
-  // Http Options
-  httpOptions = {
-    headers: new HttpHeaders({
-      'Content-Type': 'application/json'
-    })
-  };
+  // // Http Options
+  // httpOptions = {
+  //   headers: new HttpHeaders({
+  //     'Content-Type': 'application/json'
+  //   })
+  // };
 
   get(path) {
     return new Promise((resolve, reject) => {

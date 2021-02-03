@@ -16,7 +16,12 @@ export class HomeComponent implements OnInit {
   search_data = {
     title: ''
   };
-  restaurantData;
+  istanbulData; 
+  berlinData;
+  londonData;
+  helsinkiData;
+  dublinData;
+  vancouverData;
   constructor(
     private route: Router,
     private toastrService: ToastrService,
@@ -25,20 +30,16 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this._getApprovedRestaurantData();
+    this.getWeatherData();
   }
 
-  _getApprovedRestaurantData(){
-
-      this.api.get('restaurant/get_approved_restaurant').then((response: any) => {
-      this.restaurantData = response.data;
-        console.log(this.restaurantData);
-      // this.spinner.hide();
-     
-  
-      }, () => {
-        this.toastrService.success("Failed!', 'Something went wrong while fetching your profile.");
+  getWeatherData(){
+      // Get Istanbul Weather
+      this.api.get('location/2344116/').then((response: any) => {
+      this.istanbulData = response;
+        console.log(this.istanbulData);
       });
+      
     
   }
 

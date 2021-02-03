@@ -7,7 +7,7 @@ export const environment = {
   production: false,
   // apiURL: 'http://localhost:3300'
   // https://www.metaweather.com/api
-  apiURL: 'https://scan-and-order-backend.herokuapp.com'
+  apiURL: 'https://www.metaweather.com/api'
 };
 
 
