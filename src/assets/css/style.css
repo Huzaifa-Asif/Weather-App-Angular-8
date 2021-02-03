@@ -1276,6 +1276,7 @@ header .box-location:before {
 
 .offset-top0 {
   margin-top: 0px !important;
+  padding-top: 30px;
 }
 
 /* offset

@@ -44,14 +44,14 @@ export class HomeComponent implements OnInit {
 
 
   viewRestaurant(restaurant_id){
-  console.log("restaurant_id: "+restaurant_id)
+    console.log("restaurant_id: "+restaurant_id)
     this.route.navigate(['/menu_restaurant', restaurant_id]);
   }
 
   search(){
 
     if(this.search_data.title === '') {
-      this.toastrService.error("Kindly Enter Restaurant Name or Place to find Restaurants");
+      this.toastrService.error("Kindly Enter name of City or Country");
       return false;
     }
     console.log("Search: "+this.search_data.title)
