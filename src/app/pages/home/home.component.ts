@@ -12,11 +12,11 @@ import { NgxSpinnerService } from "ngx-spinner";
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  
+
   search_data = {
     title: ''
   };
-  istanbulData; 
+  istanbulData;
   berlinData;
   londonData;
   helsinkiData;
@@ -33,30 +33,66 @@ export class HomeComponent implements OnInit {
     this.getWeatherData();
   }
 
-  getWeatherData(){
-      // Get Istanbul Weather
-      this.api.get('location/2344116/').then((response: any) => {
+  getWeatherData() {
+    // Get Istanbul Weather
+    this.api.get('location/2344116/').then((response: any) => {
       this.istanbulData = response;
-        console.log(this.istanbulData);
-      });
-      
-    
+      console.log(this.istanbulData);
+    });
+
+    // Get Berlin Weather
+    this.api.get('location/638242/').then((response: any) => {
+      this.berlinData = response;
+      console.log(this.berlinData);
+    });
+
+    // Get London Weather
+    this.api.get('location/44418/').then((response: any) => {
+      this.londonData = response;
+      console.log(this.londonData);
+    });
+
+    // Get Helsinki Weather
+    this.api.get('location/565346/').then((response: any) => {
+      this.helsinkiData = response;
+      console.log(this.helsinkiData);
+    });
+
+    // Get Helsinki Weather
+    this.api.get('location/565346/').then((response: any) => {
+      this.helsinkiData = response;
+      console.log(this.helsinkiData);
+    });
+
+    // Get Dublin Weather
+    this.api.get('location/560743/').then((response: any) => {
+      this.dublinData = response;
+      console.log(this.dublinData);
+    });
+
+    // Get Vancouver Weather
+    this.api.get('location/9807/').then((response: any) => {
+      this.vancouverData = response;
+      console.log(this.vancouverData);
+    });
+
+
   }
 
 
-  viewRestaurant(restaurant_id){
-    console.log("restaurant_id: "+restaurant_id)
-    this.route.navigate(['/menu_restaurant', restaurant_id]);
+  viewWeatherDetail(woeid) {
+    console.log("woeid: " + woeid)
+    this.route.navigate(['/weather', woeid]);
   }
 
-  search(){
+  search() {
 
-    if(this.search_data.title === '') {
-      this.toastrService.error("Kindly Enter name of City or Country");
+    if (this.search_data.title === '') {
+      this.toastrService.error("Kindly Enter name of City");
       return false;
     }
-    console.log("Search: "+this.search_data.title)
-    this.route.navigate(['/search_restaurant', this.search_data.title]);
+    console.log("Search: " + this.search_data.title)
+    this.route.navigate(['/search', this.search_data.title]);
   }
 
 
