@@ -13,22 +13,34 @@
 
   <div class="container offset-top90" style="margin-top: 20px;">
 
+
+    <app-weather [weatherData]="weatherData"></app-weather>
+
     <div class="row" style="margin-bottom: 40px">
 
+      <div class="col-md-12 col-lg-12" >
+        <h3 class="mb-50 danger-text-center" *ngIf="nodata">No results were found. Try changing the keyword!</h3>
 
-      <div class="col-md-3" *ngFor="let restaurant of restaurantData">
-        <a (click)="viewRestaurant(restaurant._id)">
-          <div class="card" style="width: 100%;">
-            <img src="{{restaurant.picture}}" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h6 class="card-title" style="text-align: center; cursor: pointer">{{restaurant.name}}</h6>
+        <form id="contactform" class="boxed-form" name="contactform" method="post" novalidate="novalidate">
+
+          <div class="row">
+          
+              <div class="col-md-3">
+              </div>
+          
+            <div class="col-md-5">
+              <div class="form-group">
+                <input class="form-control" [(ngModel)]="search_data.title" type="text" value="" name="title" placeholder="Search weather by City">
+              </div>
             </div>
+            <div class="col-md-2">
+              <button (click)="search()" class="btn_blue" type="button" id="submit">Search</button>
+            </div>
+            <div class="col-md-1">
+              </div>
           </div>
-        </a>
-      </div>
+          </form>
 
-      <div class="col-md-12 col-lg-12">
-        <h3 style="text-align: center; color: #bb0c00" *ngIf="nodata">No results found for the searched term</h3>
       </div>
       
     </div>

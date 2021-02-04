@@ -1287,6 +1287,15 @@ header .box-location:before {
 .mb-20{
 margin-bottom: 20px
 }
+
+.mb-50{
+  margin-bottom: 50px
+  }
+
+  .danger-text-center{
+    text-align: center !important; 
+    color: #bb0c00
+  }
 /* offset
 ================================================== */
 /* 4.2 fill-bg

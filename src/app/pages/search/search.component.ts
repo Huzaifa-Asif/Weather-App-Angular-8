@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute  } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 declare var $: any;
 import { RestApiService } from '../../services/api/rest-api.service';
@@ -18,9 +18,9 @@ export class SearchComponent implements OnInit {
   search_data = {
     title: ''
   };
-  restaurantData;
   search_title;
   nodata;
+  weatherData = [];
   constructor(
     private router: ActivatedRoute,
     private route: Router,
@@ -28,38 +28,51 @@ export class SearchComponent implements OnInit {
     private api: RestApiService,
     private spinner: NgxSpinnerService,
   ) { 
+
+    this.route.routeReuseStrategy.shouldReuseRoute = function () {
+      return false;
+    };
     this.search_title = this.router.snapshot.paramMap.get("search_title");
     console.log("search_title: "+this.search_title)
   }
 
   ngOnInit() {
-    this._getSearchRestaurantData();
+    this.getSearchWeather();
   }
 
-  _getSearchRestaurantData(){
-
-      this.api.get('restaurant/search/restaurantByNameAddress/'+ this.search_title).then((response: any) => {
-      if(response.status){
-        this.restaurantData = response.data;
+  getSearchWeather(){
+    this.api.get('location/search/?query='+this.search_title).then((response: any) => {
+      console.log("location search");
+      console.log(response);
+      if(response.length>0){
+        this.api.get('location/'+response[0].woeid).then((response: any) => {
+          console.log("Weather search");
+          console.log(response);
+          this.weatherData.push(response)
+        });
       }
       else{
-        this.toastrService.info('', response.message);
-        this.nodata= true
-      }  
-      console.log(this.restaurantData);
-      // this.spinner.hide();
-     
-  
-      }, () => {
-        this.toastrService.info('', 'Something went wrong while fetching restaurants');
-      });
+        this.nodata= true;
+      }
+    });
     
   }
 
 
-  viewRestaurant(restaurant_id){
-  console.log("restaurant_id: "+restaurant_id)
-    this.route.navigate(['/menu_restaurant', restaurant_id]);
+
+  viewWeatherDetail(woeid){
+    console.log("woeid: " + woeid)
+    this.route.navigate(['/weather', woeid]);
+  }
+
+  search() {
+
+    if (this.search_data.title === '') {
+      this.toastrService.error("Kindly Enter name of City");
+      return false;
+    }
+    console.log("Search: " + this.search_data.title)
+    this.route.navigate(['/search', this.search_data.title]);
   }
 
 

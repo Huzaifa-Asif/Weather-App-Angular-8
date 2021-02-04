@@ -16,12 +16,6 @@ export class HomeComponent implements OnInit {
   search_data = {
     title: ''
   };
-  istanbulData;
-  berlinData;
-  londonData;
-  helsinkiData;
-  dublinData;
-  vancouverData;
   weatherData = [];
   locationArray = [2344116, 638242, 44418, 565346, 560743, 9807];
   constructor(
@@ -32,7 +26,6 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    // this.getWeatherData();
     this.getWeather();
   }
 
@@ -49,53 +42,6 @@ export class HomeComponent implements OnInit {
     console.log(this.weatherData)
 
   }
-
-  getWeatherData() {
-    // Get Istanbul Weather
-    this.api.get('location/2344116/').then((response: any) => {
-      this.istanbulData = response;
-      this.weatherData.push(response);
-      console.log(this.istanbulData);
-    });
-
-    // Get Berlin Weather
-    this.api.get('location/638242/').then((response: any) => {
-      this.berlinData = response;
-      this.weatherData.push(response);
-      console.log(this.berlinData);
-    });
-
-    // Get London Weather
-    this.api.get('location/44418/').then((response: any) => {
-      this.londonData = response;
-      this.weatherData.push(response);
-      console.log(this.londonData);
-    });
-
-    // Get Helsinki Weather
-    this.api.get('location/565346/').then((response: any) => {
-      this.helsinkiData = response;
-      this.weatherData.push(response);
-      console.log(this.helsinkiData);
-    });
-
-    // Get Dublin Weather
-    this.api.get('location/560743/').then((response: any) => {
-      this.dublinData = response;
-      this.weatherData.push(response);
-      console.log(this.dublinData);
-    });
-
-    // Get Vancouver Weather
-    this.api.get('location/9807/').then((response: any) => {
-      this.vancouverData = response;
-      this.weatherData.push(response);
-      console.log(this.vancouverData);
-    });
-
-
-  }
-
 
   viewWeatherDetail(woeid) {
     console.log("woeid: " + woeid)
