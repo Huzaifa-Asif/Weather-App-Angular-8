@@ -1279,6 +1279,14 @@ header .box-location:before {
   padding-top: 30px;
 }
 
+.weather-img{
+  height: 70%;
+  width: 70%;
+}
+
+.mb-20{
+margin-bottom: 20px
+}
 /* offset
 ================================================== */
 /* 4.2 fill-bg
