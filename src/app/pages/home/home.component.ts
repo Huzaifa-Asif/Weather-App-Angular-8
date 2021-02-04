@@ -43,11 +43,6 @@ export class HomeComponent implements OnInit {
 
   }
 
-  viewWeatherDetail(woeid) {
-    console.log("woeid: " + woeid)
-    this.route.navigate(['/weather', woeid]);
-  }
-
   search() {
 
     if (this.search_data.title === '') {

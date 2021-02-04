@@ -31,6 +31,7 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 import { AsyncPipe } from '@angular/common';
 import { SearchComponent } from './pages/search/search.component';
+import { WeatherDetailComponent } from './pages/weather-detail/weather-detail.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +39,8 @@ import { SearchComponent } from './pages/search/search.component';
     HeaderComponent,
     FooterComponent,
     SearchComponent,
-    WeatherComponent
+    WeatherComponent,
+    WeatherDetailComponent
   ],
   imports: [
     BrowserModule,
