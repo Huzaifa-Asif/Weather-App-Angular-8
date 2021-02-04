@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import * as $ from 'jquery';
 import { HomeComponent } from './pages/home/home.component';
+import { WeatherComponent } from './pages/weather/weather.component';
 import { HeaderComponent } from './pages/components/header/header.component';
 import { FooterComponent } from './pages/components/footer/footer.component';
 import { ToastrModule } from 'ngx-toastr';
@@ -36,7 +37,8 @@ import { SearchComponent } from './pages/search/search.component';
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    SearchComponent
+    SearchComponent,
+    WeatherComponent
   ],
   imports: [
     BrowserModule,
